@@ -29,7 +29,7 @@ jobs:
         run: npx ng build --configuration production
 
       - name: Inject CNAME for Custom Domain
-        run: echo "://smith-lippincott-advertising.com" > dist/sl-marketing-angular/browser/CNAME
+        run: echo "www.smith-lippincott-advertising.com" > dist/sl-marketing-angular/browser/CNAME
 
       - name: Deploy Compiled Assets to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
