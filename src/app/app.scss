@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.coming-soon-container {
+  min-height: 100vh;
+  background-color: #0f172a; /* Dark slate background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.glowing-text {
+  color: #f8fafc;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+
+  /* Subtle typography glow effect */
+  text-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 600px) {
+  .glowing-text {
+    font-size: 3rem;
+  }
+}
