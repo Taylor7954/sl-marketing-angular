@@ -1,4 +1,10 @@
-# Grants the virtual machine permission to push compiled code into your gh-pages branch
+name: Build and Deploy Angular to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
 permissions:
   contents: write
 
@@ -28,6 +34,6 @@ jobs:
       - name: Deploy Compiled Assets to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/sl-marketing-angular/browser  # Deploys only the clean, compiled web assets
-          branch: gh-pages                          # The branch GitHub Pages serves the site from
+          folder: dist/sl-marketing-angular/browser
+          branch: gh-pages
           clean: true
